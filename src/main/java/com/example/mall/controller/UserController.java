@@ -32,8 +32,7 @@ public class UserController {
             @ApiImplicitParam(dataType = "string",name = "password", value = "用户登录密码",required = true)
     })
     @GetMapping("/login")
-    public ResultVO login(@RequestParam("username") String name,
-                          @RequestParam(value = "password") String pwd){
+    public ResultVO login(@RequestParam("username") String name, @RequestParam(value = "password") String pwd){
         ResultVO resultVO = userService.checkLogin(name, pwd);
         logger.info(resultVO.getMsg());
         return resultVO;

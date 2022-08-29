@@ -1,4 +1,4 @@
-package com.example.mall.controller;
+package com.example.mall.interceptor;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.example.mall.vo.ResStatus;

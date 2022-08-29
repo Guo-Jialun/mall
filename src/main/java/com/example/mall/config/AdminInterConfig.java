@@ -1,6 +1,6 @@
 package com.example.mall.config;//package com.example.mall.config;
 //
-//import com.example.mall.controller.CheckTokenInterceptor;
+//import com.example.mall.interceptor.CheckTokenInterceptor;
 //import com.example.mall.interceptor.AdminInterceptor;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.context.annotation.Configuration;

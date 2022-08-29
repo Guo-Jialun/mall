@@ -1,10 +1,13 @@
 package com.example.mall.config;
 
-import com.example.mall.controller.CheckTokenInterceptor;
+import com.example.mall.interceptor.CheckTokenInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
 
 @Configuration
 public class InterceptorConfig implements WebMvcConfigurer {
@@ -30,4 +33,5 @@ public class InterceptorConfig implements WebMvcConfigurer {
                 .addPathPatterns("/shop/updateproductparam")
                 .addPathPatterns("/shop/deleteproduct");
     }
+
 }

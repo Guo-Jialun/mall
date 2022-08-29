@@ -39,7 +39,7 @@ public class UploadFileController {
         fileName = getFileName(fileName);
         String localfilepath = getUploadPath();
         if (!file.isEmpty()) {
-            try (BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(new File(localfilepath + File.separator + fileName)))) {
+            try (BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(localfilepath + File.separator + fileName))) {
                 out.write(file.getBytes());
                 out.flush();
                 String path=filepath + File.separator + fileName;
@@ -62,7 +62,7 @@ public class UploadFileController {
         fileName = getFileName(fileName);
         String localfilepath = getUploadPath();
         if (!file.isEmpty()) {
-            try (BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(new File(localfilepath + File.separator + fileName)))) {
+            try (BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(localfilepath + File.separator + fileName))) {
                 out.write(file.getBytes());
                 out.flush();
                 String imgUrl=filepath + File.separator + fileName;
@@ -84,7 +84,7 @@ public class UploadFileController {
 
         String localfilepath = getUploadPath();
         if (!file.isEmpty()) {
-            try (BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(new File(localfilepath + File.separator + fileName)))) {
+            try (BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(localfilepath + File.separator + fileName))) {
                 out.write(file.getBytes());
                 out.flush();
                 String path=filepath + File.separator + fileName;
