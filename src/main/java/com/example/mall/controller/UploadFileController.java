@@ -9,10 +9,7 @@ import com.example.mall.vo.ResStatus;
 import com.example.mall.vo.ResultVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.ResourceUtils;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
@@ -23,6 +20,7 @@ import java.util.Date;
  * @author jiashubing
  * @since 2019/6/25
  */
+@CrossOrigin
 @RestController
 @RequestMapping("file")
 public class UploadFileController {

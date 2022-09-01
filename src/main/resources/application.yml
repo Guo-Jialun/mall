@@ -1,15 +1,15 @@
 spring:
   datasource:
-    username: root
-    password: root
-    url: jdbc:mysql://localhost:3306/mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2b8&sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false&zeroDateTimeBehavior=convertToNull
+    username: guo
+    password: 19991022
+    url: jdbc:mysql://39.101.68.6:3306/mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2b8&sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false&zeroDateTimeBehavior=convertToNull
     driver-class-name: com.mysql.cj.jdbc.Driver
   jackson:
     data-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
 
 server:
-  port: 8081
+  port: 8080
 
 hikari:
   minimum-idle=3

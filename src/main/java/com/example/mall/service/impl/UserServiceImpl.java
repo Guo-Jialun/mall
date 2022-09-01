@@ -107,7 +107,6 @@ public class UserServiceImpl implements UserService {
                 return new ResultVO(ResStatus.NO,"登录失败，密码错误！",null);
             }
         }
-
     }
 
     @Override
@@ -182,18 +181,18 @@ public class UserServiceImpl implements UserService {
     //管理员删除用户
     @Override
     public ResultVO deleteUser(int userId) {
-        synchronized (this) {
-            try {
+    synchronized (this) {
+        try {
 
-                //user表
-                userMapper.deleteUser(userId);
+            //user表
+            userMapper.deleteUser(userId);
 
-                return new ResultVO(ResStatus.OK, "success", null);
-            } catch (Exception e) {
-                return new ResultVO(ResStatus.NO, "数据库层删除失败！", null);
-            }
+            return new ResultVO(ResStatus.OK, "success", null);
+        } catch (Exception e) {
+            return new ResultVO(ResStatus.NO, "数据库层删除失败！", null);
         }
     }
+}
     //管理员查看所有用户
     @Override
     public ResultVO listAllUser() {
